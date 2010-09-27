@@ -1,0 +1,56 @@
+= Nokoload
+
+* Git: http://github.com/jacott/nokoload
+* Author: Geoff Jacobsen   
+* Copyright: 2009-2010    
+* License: GNU GPLv3
+
+== Description
+
+Nokoload is a Web load testing tool. It is built on top of net/http and nokogiri.
+
+Nokoload has a DSL which allows running mulitple processes against a web location. Statistics are collected and can be
+written to a csv file for displaying results. Fields can be refered to via their labels.
+
+When testing a Rails application the environment.rb file can be loaded and then any application command can be used to
+seed the database or lookup results during the test.
+
+== Synopsis
+
+   require 'nokoload'
+
+   include Nokoload
+
+   host "http://localhost:3000/"
+
+   run 10 do |thread| # start 10 processes
+     step 'login as normal user' do
+       get '/login'
+       submit 'login', {'Username' => "user#{thread}", 'Password' => 'secret'}
+     end
+     after(0.5) # wait half a second
+     follow_link "The name of a link on the page"
+     post_link 'Delete', :_method => 'delete'
+   end
+
+   while_running(2) do
+     puts show_stats
+   end
+   puts
+   puts show_stats(:header)
+
+== Requirements
+
+* ruby 1.8 or 1.9
+* nokogiri
+
+== Install
+
+* gem install nokoload
+
+== Development
+
+Developing Nokoload requires jeweler
+
+* rake test
+* rake build

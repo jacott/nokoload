@@ -1,0 +1,62 @@
+<form>
+  <table>
+    <tr>
+      <td>
+        <input disabled="disabled" name="not_me" value="25" />
+        <select name="not_me_either" disabled="disabled" >
+          <option selected="selected" value="123">Not ME</option>
+        </select>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="product_expected_velocity">Expected velocity</label></td>
+      <td class="field"><input id="product_expected_velocity" maxlength="3" name="product[expected_velocity]" size="3" title="how many stories do we expect to complete per iteration" value="25" type="text"></td>
+    </tr>
+
+    <tr> <td class="label"><label for="product_burnup_height">Burnup height</label></td><td class="field"><input id="product_burnup_height" maxlength="4" name="product[burnup_height]" size="4" title="height of the burnup chart" type="text"></td>  </tr>
+
+    <tr>
+      <th>Milestones</th>
+      <td id="milestones" colspan="0">
+      </td></tr><tr class="milestone inline_errors">
+      <td class="label"><label for="product_milestones_attributes_0_name">Name</label></td><td class="field"><input id="product_milestones_attributes_0_name" maxlength="31" name="product[milestones_attributes][0][name]" size="31" type="text"></td>
+      <td class="label"><label for="product_milestones_attributes_0_date_of_milestone">Date</label></td><td id="" class="field"><input autocomplete="off" class="date year_range_2004_2014 " id="product_milestones_attributes_0_date_of_milestone" maxlength="31" name="product[milestones_attributes][0][date_of_milestone]" size="14" type="text">&nbsp;</td>
+      
+    </tr>
+
+    <tr class="milestone inline_errors">
+      
+      <td class="label"><label for="product_milestones_attributes_1_name">Name</label></td><td class="field"><input id="product_milestones_attributes_1_name" maxlength="31" name="product[milestones_attributes][1][name]" size="31" type="text"></td>
+      <td class="label"><label for="product_milestones_attributes_1_date_of_milestone">Date</label></td><td id="" class="field"><input autocomplete="off" class="date year_range_2004_2014 " id="product_milestones_attributes_1_date_of_milestone" maxlength="31" name="product[milestones_attributes][1][date_of_milestone]" size="14" type="text">&nbsp;</td>
+      
+    </tr>
+
+    <tr>
+      <th><label for="roles_1_role_id">Roles</label> </th>
+      <td>
+        <div id="role_1">
+          <select id="roles_1_role_id" name="roles[][role_id]"><option value="" selected="selected"></option>
+            <option value="1710984090">developer</option>
+            <option value="1331750525">owner</option>
+            <option value="2085639750">tester</option></select>
+          <select id="roles_2_user_id" name="roles[][user_id]"><option value="" selected="selected"></option>
+            <option value="1976283457">Bob</option>
+            <option value="1519788563">Sally</option></select>
+        </div>
+        
+        
+        <div id="role_2">
+          <select id="roles_2_role_id" name="roles[][role_id]"><option value="" selected="selected"></option>
+            <option value="1710984090">developer</option>
+            <option value="1331750525">owner</option>
+            <option value="2085639750">tester</option></select>
+          <select id="roles_2_user_id" name="roles[][user_id]"><option value="" selected="selected"></option>
+            <option value="1976283457">Bob</option>
+            <option value="1519788563">Sally</option></select>
+        </div>
+        
+        <input type="submit" value="Create" name="create"/>
+      </td>
+    </tr>    
+  </table>
+</form>
