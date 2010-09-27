@@ -50,7 +50,7 @@ seed the database or lookup results during the test.
 
 == Development
 
-Developing Nokoload requires jeweler
+Developing Nokoload requires jeweler, sinatra, shotgun and unicorn
 
 * rake test
 * rake build
